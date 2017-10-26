@@ -61,12 +61,12 @@ RUN \
 	/etc/nginx/conf.d/default.conf \
 	/tmp/* && \
 
+# chmod /tmp & delete old screens files
+chmod 755 /tmp \
+
+
 # fix logrotate
  sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
-
-# chmod /tmp & delete old screens files
-RUN chmod 755 /tmp
-RUN rm -rf /tmp/screens
 
 # add local files
 COPY root/ /
