@@ -65,8 +65,10 @@ RUN \
  sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
 
 # chmod /tmp & delete old screens files
-chmod 755 /tmp
-rm -rf /tmp/screens
+chmod 755 \
+	  /tmp
+rm -rf \ 
+       /tmp/screens
 
 # add local files
 COPY root/ /
