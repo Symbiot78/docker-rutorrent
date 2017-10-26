@@ -61,8 +61,6 @@ RUN \
 	/etc/nginx/conf.d/default.conf \
 	/tmp/* && \
 
-
-
 # fix logrotate
  sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
 
